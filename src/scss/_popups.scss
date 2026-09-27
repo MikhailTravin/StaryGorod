@@ -1,0 +1,122 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    transition: visibility 0.8s ease 0s;
+    visibility: hidden;
+    pointer-events: none;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @media (max-width: 390px) {
+        padding: 20px 10px;
+    }
+}
+.popup_show {
+    z-index: 150;
+    visibility: visible;
+    overflow: auto;
+    pointer-events: auto;
+}
+.popup_show .popup__content {
+    visibility: visible;
+    transform: scale(1);
+}
+.popup__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup__content {
+    position: relative;
+    visibility: hidden;
+    transform: scale(0);
+    transition: transform 0.3s ease 0s;
+    width: 100%;
+    background: #276235;
+    overflow: hidden;
+    max-width: 522px;
+    padding: 46px 55px 46px 55px;
+    @media (max-width: 768px) {
+        padding: 30px 20px 30px 20px;
+    }
+    .lock & {
+        visibility: visible;
+    }
+}
+
+.popup__close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+        fill: var(--ffffff);
+    }
+}
+
+.popup-forms {
+    // .popup-forms__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+        @media (max-width: 768px) {
+            gap: 20px;
+        }
+    }
+
+    // .popup-forms__top
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @media (max-width: 768px) {
+            gap: 10px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 157%;
+            text-align: center;
+            color: var(--ffffff);
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // .popup-forms__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 117%;
+        text-align: center;
+        color: var(--ffffff);
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+}
+
+

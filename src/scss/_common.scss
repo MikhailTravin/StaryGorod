@@ -109,8 +109,6 @@ a {
   }
   @media (any-hover: hover) {
     &:hover {
-      box-shadow: 0 10px 25px rgba(255, 56, 60, 0.45);
-
       &::before {
         left: 125%;
       }
@@ -243,17 +241,7 @@ a {
   @media (max-width: 768px) {
     gap: 10px;
   }
-  p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    margin-top: 10px;
-    opacity: 0.7;
-    @media (max-width: 768px) {
-      font-size: 14px;
-      margin-top: 7px;
-    }
-  }
+
   // .heading-complex__title
 
   &__title {
@@ -265,6 +253,31 @@ a {
     color: var(--316c3f);
     @media (max-width: 768px) {
       font-size: 12px;
+    }
+  }
+
+  // .heading-complex__text
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    @media (max-width: 768px) {
+      margin-top: 7px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      opacity: 0.7;
+      span {
+        font-weight: 600;
+        opacity: 1;
+      }
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
     }
   }
 }

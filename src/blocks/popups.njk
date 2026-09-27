@@ -12,7 +12,7 @@
                         Заказать звонок
                     </div>
                 </div>
-                <form data-popup-message="#thanks" action="#" data-dev class="form">
+                <form data-popup-message="#thanks" method="POST" action="send-call.php" data-ajax class="form">
                     <div class="form__inputs">
                         <div class="form__input">
                             <div class="form__icon">
@@ -20,7 +20,8 @@
                                     <use xlink:href="img/sprite.svg#user"></use>
                                 </svg>
                             </div>
-                            <input data-required autocomplete="off" type="text" placeholder="Ваше имя" class="input">
+                            <input data-required autocomplete="off" type="text" name="name" placeholder="Ваше имя"
+                                class="input">
                         </div>
                         <div class="form__input">
                             <div class="form__icon">
@@ -28,8 +29,8 @@
                                     <use xlink:href="img/sprite.svg#phone2"></use>
                                 </svg>
                             </div>
-                            <input data-required autocomplete="off" type="text" placeholder="Номер телефона"
-                                class="input telephone">
+                            <input data-required autocomplete="off" type="text" name="phone"
+                                placeholder="Номер телефона" class="input telephone">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-red">
